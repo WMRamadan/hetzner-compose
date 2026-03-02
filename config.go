@@ -13,14 +13,14 @@ type Config struct {
 }
 
 type NetworkSubnetConfig struct {
-	IPRange string              `yaml:"ip_range"`
-	Zone    string              `yaml:"zone"`
-	Subnet  NetworkSubnetConfig `yaml:"subnet"`
+	IPRange string `yaml:"ip_range"`
+	Zone    string `yaml:"zone"`
 }
 
 type Network struct {
-	Name    string `yaml:"name"`
-	IPRange string `yaml:"ip_range"`
+	Name    string              `yaml:"name"`
+	IPRange string              `yaml:"ip_range"`
+	Subnet  NetworkSubnetConfig `yaml:"subnet"`
 }
 
 type Firewall struct {
