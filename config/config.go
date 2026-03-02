@@ -1,10 +1,4 @@
-package main
-
-import (
-	"os"
-
-	"gopkg.in/yaml.v3"
-)
+package config
 
 type Config struct {
 	Network  Network  `yaml:"network"`
@@ -40,18 +34,4 @@ type Server struct {
 	Image    string   `yaml:"image"`
 	Location string   `yaml:"location"`
 	SSHKeys  []string `yaml:"ssh_keys"`
-}
-
-func LoadConfig(path string) (*Config, error) {
-	data, err := os.ReadFile(path)
-	if err != nil {
-		return nil, err
-	}
-
-	var cfg Config
-	if err := yaml.Unmarshal(data, &cfg); err != nil {
-		return nil, err
-	}
-
-	return &cfg, nil
 }

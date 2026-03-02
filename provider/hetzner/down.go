@@ -1,14 +1,15 @@
-package main
+package hetzner
 
 import (
 	"context"
 	"fmt"
+	"hetzner-compose/config"
 	"time"
 
 	"github.com/hetznercloud/hcloud-go/v2/hcloud"
 )
 
-func Down(client *hcloud.Client, cfg *Config) error {
+func Down(client *hcloud.Client, cfg *config.Config) error {
 	ctx := context.Background()
 
 	fmt.Println("Deleting servers...")
