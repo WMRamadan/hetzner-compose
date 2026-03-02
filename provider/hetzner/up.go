@@ -1,8 +1,9 @@
-package main
+package hetzner
 
 import (
 	"context"
 	"fmt"
+	"hetzner-compose/config"
 	"net"
 
 	"github.com/hetznercloud/hcloud-go/v2/hcloud"
@@ -25,7 +26,7 @@ func parseIPNets(cidrs []string) ([]net.IPNet, error) {
 	return result, nil
 }
 
-func Up(client *hcloud.Client, cfg *Config) error {
+func Up(client *hcloud.Client, cfg *config.Config) error {
 	ctx := context.Background()
 
 	labels := map[string]string{

@@ -11,7 +11,7 @@ export HCLOUD_TOKEN=your_token_here
 ## Build
 To build the cli:
 ```
-go build
+go build ./cmd/hetzner-compose
 ```
 
 ## Execution
