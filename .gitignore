@@ -27,6 +27,9 @@ go.work.sum
 # env file
 .env
 
+# hetzner-compose binary
+.hetzner-compose
+
 # Editor/IDE
 # .idea/
 # .vscode/
