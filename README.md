@@ -3,7 +3,7 @@
 A Docker Compose like tool for Hetzner Cloud which uses a YAML file to build your infrastructure.
 
 ## Requirements
-You will need an `hcloud token` once your have your token export it:
+You will need an `hcloud token` once you have your token export it:
 ```
 export HCLOUD_TOKEN=your_token_here
 ```
