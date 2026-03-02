@@ -66,6 +66,29 @@ func Down(client *hcloud.Client, cfg *Config) error {
 		client.Network.Delete(ctx, n)
 	}
 
+	fmt.Println("Deleting SSH keys...")
+
+	sshKeys, _, err := client.SSHKey.List(ctx, hcloud.SSHKeyListOpts{
+		ListOpts: hcloud.ListOpts{
+			LabelSelector: "managed-by=hetzner-compose",
+		},
+	})
+	if err != nil {
+		return err
+	}
+
+	for _, k := range sshKeys {
+		fmt.Println("Deleting SSH key", k.Name)
+
+		_, err := client.SSHKey.Delete(ctx, k)
+		if err != nil {
+			return err
+		}
+
+		// Short grace wait for backend propagation
+		time.Sleep(2 * time.Second)
+	}
+
 	fmt.Println("Infrastructure deleted.")
 	return nil
 }

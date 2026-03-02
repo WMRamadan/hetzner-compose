@@ -31,6 +31,9 @@ func LoadOrCreateSSHKeys(ctx context.Context, client *hcloud.Client, paths []str
 			sshKey, _, err = client.SSHKey.Create(ctx, hcloud.SSHKeyCreateOpts{
 				Name:      keyName,
 				PublicKey: string(content),
+				Labels: map[string]string{
+					"managed-by": "hetzner-compose",
+				},
 			})
 			if err != nil {
 				return nil, err
