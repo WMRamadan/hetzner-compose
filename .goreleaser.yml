@@ -1,0 +1,9 @@
+builds:
+  - binary: hetzner-compose
+    main: ./cmd/hetzner-compose
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
