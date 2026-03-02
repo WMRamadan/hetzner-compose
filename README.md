@@ -1,6 +1,6 @@
 # Hetzner Compose
 
-A Docker Compose like tool for Hetzner Cloud which uses a YAML file to build your infrastructure!
+A Docker Compose like tool for Hetzner Cloud which uses a YAML file to build your infrastructure.
 
 ## Requirements
 You will need an `hcloud token` once you have your token export it:
