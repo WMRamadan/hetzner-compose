@@ -82,7 +82,7 @@ The CLI reads the YAML configuration and uses the Hetzner Cloud API to create an
 
 ## Roadmap
 
-Planned improvements may include:
+Planned improvements include:
 
 - [ ] More Hetzner Cloud resources
 - [ ] Resource dependencies
