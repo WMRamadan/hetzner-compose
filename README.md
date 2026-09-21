@@ -84,27 +84,17 @@ The CLI reads the YAML configuration and uses the Hetzner Cloud API to create an
 
 Planned improvements may include:
 
-[] More Hetzner Cloud resources
-
-[] Resource dependencies
-
-[] Update/reconciliation support
-
-[] Better infrastructure state handling
-
-[] Configuration validation
-
-[] Multiple configuration files
-
-[] Variable interpolation
-
-[] Dry-run support
-
-[] Import existing Hetzner resources
-
-[] Kubernetes cluster provisioning
-
-[] Additional networking features
+[ ] More Hetzner Cloud resources
+[ ] Resource dependencies
+[ ] Update/reconciliation support
+[ ] Better infrastructure state handling
+[ ] Configuration validation
+[ ] Multiple configuration files
+[ ] Variable interpolation
+[ ] Dry-run support
+[ ] Import existing Hetzner resources
+[ ] Kubernetes cluster provisioning
+[ ] Additional networking features
 
 Have an idea? Open an issue or start a discussion.
 
